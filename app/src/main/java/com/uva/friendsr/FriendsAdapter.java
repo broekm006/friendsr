@@ -30,56 +30,31 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.grid_item, parent, false);
         }
 
-        for (int i = 0; i < friends.size(); i++){
-
-        }
-
         ImageView image = convertView.findViewById(R.id.imageView);
         TextView text = convertView.findViewById(R.id.name);
 
+        text.setText(friends.get(position).getName());
 
-        image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.arya));
-        text.setText("Arya");
         switch (friends.get(position).getName()){
-            case "arya":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.arya));
-                text.setText("Arya");
+            case "arya": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.arya));
                 break;
-            case "cersei":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.cersei));
-                text.setText("Cersei");
+            case "cersei": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.cersei));
                 break;
-            case "daenerys":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.daenerys));
-                text.setText("Daenerys");
+            case "daenerys": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.daenerys));
                 break;
-            case "jaime":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.jaime));
-                text.setText("Jaime");
+            case "jaime": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.jaime));
                 break;
-            case "jon":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.jon));
-                text.setText("Jon");
+            case "jon": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.jon));
                 break;
-            case "jorah":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.jorah));
-                text.setText("Jorah");
+            case "jorah": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.jorah));
                 break;
-            case "margaery":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.margaery));
-                text.setText("Margaery");
+            case "margaery": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.margaery));
                 break;
-            case "melisandre":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.melisandre));
-                text.setText("Melisandre");
+            case "melisandre": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.melisandre));
                 break;
-            case "sansa":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.sansa));
-                text.setText("Sansa");
+            case "sansa": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.sansa));
                 break;
-            case "tyrion":
-                image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.tyrion));
-                text.setText("Tyrion");
+            case "Tyrion": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.tyrion));
                 break;
 
         }
