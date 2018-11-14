@@ -19,16 +19,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Friend arya = new Friend("Faceless Trainee", "arya", getResources().getIdentifier("arya.png", "id", getPackageName()));
-        Friend cersei = new Friend("Bitch Queen", "cersei", getResources().getIdentifier("cersei.png", "id", getPackageName()));
-        Friend daenerys = new Friend("Queen of Dragons", "daenerys", getResources().getIdentifier("daenerys.png", "id", getPackageName()));
-        Friend jaime = new Friend("Can't Decide Kingsknight", "jaime", getResources().getIdentifier("jaime.png", "id", getPackageName()));
-        Friend jon = new Friend("King of the North", "jon", getResources().getIdentifier("jon.png", "id", getPackageName()));
-        Friend jorah = new Friend("Warrior with honor", "jorah", getResources().getIdentifier("jorah.png", "id", getPackageName()));
-        Friend margaery = new Friend("Enter generic description here", "margaery", getResources().getIdentifier("margaery.png", "id", getPackageName()));
-        Friend melisandre = new Friend("Speaks all Languages", "melisandre", getResources().getIdentifier("melisandre.png", "id", getPackageName()));
-        Friend sansa = new Friend("Ramsys \"toy\"", "sansa", getResources().getIdentifier("sansa.png", "id", getPackageName()));
-        Friend tyrion = new Friend("Absolute Badass", "Tyrion", getResources().getIdentifier("tyrion.png", "id", getPackageName()));
+        Friend arya = new Friend("Faceless Trainee", "arya", getResources().getIdentifier("arya", "drawable", getPackageName()));
+        Friend cersei = new Friend("Bitch Queen", "cersei", getResources().getIdentifier("cersei", "drawable", getPackageName()));
+        Friend daenerys = new Friend("Queen of Dragons", "daenerys", getResources().getIdentifier("daenerys", "drawable", getPackageName()));
+        Friend jaime = new Friend("Can't Decide Kingsknight", "jaime", getResources().getIdentifier("jaime", "drawable", getPackageName()));
+        Friend jon = new Friend("King of the North", "jon", getResources().getIdentifier("jon", "drawable", getPackageName()));
+        Friend jorah = new Friend("Warrior with honor", "jorah", getResources().getIdentifier("jorah", "drawable", getPackageName()));
+        Friend margaery = new Friend("Enter generic description here", "margaery", getResources().getIdentifier("margaery", "drawable", getPackageName()));
+        Friend melisandre = new Friend("Speaks all Languages", "melisandre", getResources().getIdentifier("melisandre", "drawable", getPackageName()));
+        Friend sansa = new Friend("Ramsys \"toy\"", "sansa", getResources().getIdentifier("sansa", "drawable", getPackageName()));
+        Friend tyrion = new Friend("Absolute Badass", "Tyrion", getResources().getIdentifier("tyrion", "drawable", getPackageName()));
 
         friends.add(arya);
         friends.add(cersei);

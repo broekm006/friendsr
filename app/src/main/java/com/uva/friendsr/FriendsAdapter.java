@@ -32,9 +32,12 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
 
         ImageView image = convertView.findViewById(R.id.imageView);
         TextView text = convertView.findViewById(R.id.name);
-
+        Friend friend = friends.get(position);
         text.setText(friends.get(position).getName());
+        image.setImageDrawable(getContext().getResources().getDrawable(friend.getDrawableId()));
 
+        //System.out.println(friend.getDrawableId());
+        /*
         switch (friends.get(position).getName()){
             case "arya": image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.arya));
                 break;
@@ -58,6 +61,8 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
                 break;
 
         }
+
+        */
         return convertView;
     }
 }
