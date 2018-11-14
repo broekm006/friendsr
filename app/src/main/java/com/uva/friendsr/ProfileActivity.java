@@ -21,22 +21,26 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        // get info from main
         Intent intent = getIntent();
         retrievedFriend = (Friend) intent.getSerializableExtra("clicked_friend");
 
         ImageView image = findViewById(R.id.imageView2);
-        TextView txt = findViewById(R.id.textView);
+        TextView name = findViewById(R.id.textView);
         TextView bio = findViewById(R.id.textView2);
 
-        txt.setText(retrievedFriend.getName());
+        // update name, bio and image
+        name.setText(retrievedFriend.getName());
         bio.setText(retrievedFriend.getBio());
         image.setImageDrawable(getDrawable(retrievedFriend.getDrawableId()));
 
+        // setup memory management
         prefs = getSharedPreferences("settings", MODE_PRIVATE);
         editor = prefs.edit();
 
         float aStoredFloat = prefs.getFloat(retrievedFriend.getName(), 0);
 
+        // get ratingbar and update it with the correct value
         rating_bar_id = findViewById(R.id.ratingBar);
         rating_bar_id.setOnRatingBarChangeListener(new RatingBarClickListener());
 

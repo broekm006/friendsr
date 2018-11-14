@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // create all the friends
         Friend arya = new Friend("Faceless Trainee", "arya", getResources().getIdentifier("arya", "drawable", getPackageName()));
         Friend cersei = new Friend("Bitch Queen", "cersei", getResources().getIdentifier("cersei", "drawable", getPackageName()));
         Friend daenerys = new Friend("Queen of Dragons", "daenerys", getResources().getIdentifier("daenerys", "drawable", getPackageName()));
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Friend sansa = new Friend("Ramsys \"toy\"", "sansa", getResources().getIdentifier("sansa", "drawable", getPackageName()));
         Friend tyrion = new Friend("Absolute Badass", "Tyrion", getResources().getIdentifier("tyrion", "drawable", getPackageName()));
 
+        // add friends to the list
         friends.add(arya);
         friends.add(cersei);
         friends.add(daenerys);
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         friends.add(sansa);
         friends.add(tyrion);
 
-
+        // create adapter / gridview
         FriendsAdapter adapter = new FriendsAdapter(this, R.layout.grid_item, friends);
         GridView gridView = (GridView) findViewById(R.id.griddy);
         gridView.setAdapter(adapter);
@@ -49,12 +51,11 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new GridItemClickListener());
     }
 
-
+    // on click update the ui to specific profile
     private class GridItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-            //adapterView.getItemAtPosition(i);
             Friend clickedFriend = (Friend) adapterView.getItemAtPosition(i);
             System.out.println(clickedFriend.getName());
 
