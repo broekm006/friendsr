@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="313dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -25,16 +25,20 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="61dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:fontFamily="@font/aclonica"
+        android:text="TextView"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="134dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:fontFamily="@font/aclonica"
+        android:text="TextView"
+        android:textSize="14sp" />
 </LinearLayout>
